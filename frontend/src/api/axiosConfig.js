@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 
 // 1. Cria uma instância do Axios com configurações pré-definidas
 const api = axios.create({
-    baseURL: 'http://localhost:8080',
+    baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8080',
     withCredentials: true, // Habilita o envio automático de cookies
 });
 
