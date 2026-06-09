@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
+/* Tema base (Tailwind) */
+@theme {
+    --color-primary: #3B7868;
+    --font-inter: "Inter", sans-serif;
+    --bg-pattern: url('/images/background-home.png');
+    --color-primary-dark: #2C5A4D;
+    --color-accent: #EBF2F0;
+    --color-light-gray: #F5F5F5;
+}
+
+/* Variaveis CSS dinâminas (para o React alterar - Pág. Personalização ADMIN) */
+:root {
+  --primary-color: #3B7868;
+  --secondary-color: #2C5A4D;
+}
+
+/* Exemplos de uso dinâmico */
+.bg-primary {
+  background-color: var(--primary-color);
+}
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+.text-primary {
+  color: var(--primary-color);
+}
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+/* Padrões e outros estilos */
+.bg-pattern {
+    background-image: var(--bg-pattern);
+}
+
+/* cor normal das bolinhas */
+.swiper-pagination-bullet {
+  background-color: #d1d5db;
+  opacity: 1;
+}
+
+/* cor da bolinha ativa */
+.swiper-pagination-bullet-active {
+  background-color: #3b7868;
+}
+    
+
+body {
+    @apply bg-light-gray;
+}
+
+

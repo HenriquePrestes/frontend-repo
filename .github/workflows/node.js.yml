@@ -1,0 +1,40 @@
+name: Testes e Build (CI)
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+      - dev
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # === PASSO CRÍTICO: Move o conteúdo de 'frontend/' para o diretório raiz do runner ===
+      - name: Move frontend code to root
+        run: mv frontend/* frontend/.[!.]* .
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' 
+          cache: 'npm'
+          
+      - name: Install dependencies
+        # Agora o 'npm ci' vai funcionar porque o package.json está na raiz do runner
+        run: npm ci
+
+      - name: Run tests
+        # Ajuste: A pasta agora é a raiz do runner, então não precisamos de 'cd frontend'
+        run: npm test 
+        
+      - name: Create Production Build
+        run: npm run build
