@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Register from "../Buttons/Register";
 import Login from "../Buttons/Login";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
