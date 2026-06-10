@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   format,
   addMonths,
@@ -361,13 +361,13 @@ export default function MonthlyDateSelection() {
       <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-2xl">
         {/* Botão voltar - só aparece quando NÃO tem data selecionada */}
         {!selectedDate && (
-          <a
-            href="/buscar-medico"
+          <Link
+            to="/buscar-medico"
             className="mb-4 text-sm text-[rgba(59,120,104,1)] hover:underline flex items-center gap-1 font-medium cursor-pointer"
           >
             <FaChevronLeft size={14} />
             Voltar
-          </a>
+          </Link>
         )}
 
         {/* Botão voltar ao calendário - só aparece quando tem data selecionada */}

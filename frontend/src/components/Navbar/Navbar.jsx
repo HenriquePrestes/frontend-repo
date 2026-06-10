@@ -23,9 +23,9 @@ export default function Navbar() {
 
                 {/* Links principais (desktop apenas) */}
                 <div className="hidden lg:flex gap-10 text-primary">
-                    <a href="/" className="text-lg">Para pacientes</a>
-                    <a href="/" className="text-lg">Para médicos</a>
-                    <a href="/" className="text-lg">Para empresas</a>
+                    <Link to="/home" className="text-lg">Para pacientes</Link>
+                    <Link to="/home" className="text-lg">Para médicos</Link>
+                    <Link to="/home" className="text-lg">Para empresas</Link>
                 </div>
 
                 {/* Botão hamburguer (aparece só em mobile) */}
@@ -55,9 +55,9 @@ export default function Navbar() {
             {/* Menu mobile */}
             {isOpen && (
                 <div className="md:hidden bg-white shadow-md absolute top-16 right-0  h-screen p-6 flex flex-col gap-6 text-primary">
-                    <a href="/" className="text-lg">Para pacientes</a>
-                    <a href="/" className="text-lg">Para médicos</a>
-                    <a href="/" className="text-lg">Para empresas</a>
+                    <Link to="/home" className="text-lg">Para pacientes</Link>
+                    <Link to="/home" className="text-lg">Para médicos</Link>
+                    <Link to="/home" className="text-lg">Para empresas</Link>
                     <Register>Cadastrar</Register>
                     <Login>Entrar</Login>
                 </div>

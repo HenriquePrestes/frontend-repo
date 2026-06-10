@@ -66,8 +66,8 @@ export default function Header() {
             {/* Menu */}
             <nav className="justify-start">
                 <ul className="flex gap-6 text-primary justify-start">
-                    <li><a href="/buscar-medico" className="hover:underline">Agendar</a></li>
-                    <li><a href="/minhas-consultas" className="hover:underline">Minhas consultas</a></li>
+                        <li><Link to="/buscar-medico" className="hover:underline">Agendar</Link></li>
+                        <li><Link to="/minhas-consultas" className="hover:underline">Minhas consultas</Link></li>
                 </ul>
             </nav>
             
