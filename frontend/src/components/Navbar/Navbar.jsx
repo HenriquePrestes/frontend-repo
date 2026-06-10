@@ -2,6 +2,7 @@ import { useState } from "react";
 import Register from "../Buttons/Register";
 import Login from "../Buttons/Login";
 import { Link } from "react-router-dom";
+import logo from "../../assets/icons/logo.svg";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,12 +14,12 @@ export default function Navbar() {
                 <div className="flex items-center gap-3">
                     <img
                         className="w-12"
-                        src="../src/assets/icons/logo.svg"
-                        alt="logo"
+                        src={logo}
+                        alt="MedFast"
                     />
                     <div className="flex flex-col text-xl leading-none tracking-tight">
-                        <h1 className="font-bold">HEALTH</h1>
-                        <h1>CARE</h1>
+                        <h1 className="font-bold">MED</h1>
+                        <h1>FAST</h1>
                     </div>
                 </div>
 
